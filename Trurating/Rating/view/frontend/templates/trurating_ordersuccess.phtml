@@ -1,0 +1,20 @@
+<?php 
+$dataArray = $block->getSomething($block->getOrderId());
+
+echo "<pre>";
+print_r($dataArray);
+echo "</pre>";
+//$lid = $block->getData();
+//print_r($lid);
+
+$dataArrayss = json_encode($dataArray);
+?>
+
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Trurating": <?php echo $dataArrayss ?>
+        }
+    }        
+</script>
